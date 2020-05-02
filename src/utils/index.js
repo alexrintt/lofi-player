@@ -1,16 +1,7 @@
-const formatTime = (time) => {
-  time = Math.round(time);
-
-  const minutes = Math.floor(time / 60);
-
-  const seconds = time - minutes * 60 < 10 ? "0" + seconds : seconds;
-
-  return `${minutes}:${seconds}`;
-};
-
 const query = document.querySelector.bind(document);
-const queryAll = document.querySelectorAll.bind(document);
-const getByClass = document.getElementsByClassName.bind(document);
-const getById = document.getElementById.bind(document);
+const query_all = document.querySelectorAll.bind(document);
+const get_by_class = document.getElementsByClassName.bind(document);
+const get_by_id = document.getElementById.bind(document);
+const create_el = document.createElement.bind(document);
 
-export { formatTime, query, getByClass, queryAll, getById };
+export { query, query_all, get_by_class, get_by_id, create_el };
