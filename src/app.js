@@ -1,11 +1,24 @@
-import User from './components/User';
-import Header from './components/Header';
-import './scss/app.scss';
+import "./scss/app.scss";
 
-const app = async () => {
-	document.getElementById('header').innerHTML = Header();
-	document.getElementById('user').innerHTML = await User();
-};
+let player = null;
 
-// Load app
-app();
+function initPlayer() {
+  player = new YT.Player("player", {
+    controls: "0",
+    height: "360",
+    width: "640",
+    playerVars: {
+      color: "white",
+      controls: "0",
+      listType: "playlis",
+      list: "PLuCUpg5b_vRqWMNwIH5oazz_qD170NtI4",
+    },
+    events: {
+      onReady: initControls,
+    },
+  });
+}
+function initControls() {
+  player.playVideo();
+}
+window.onload = initPlayer;
