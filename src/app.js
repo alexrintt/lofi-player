@@ -1,21 +1,30 @@
 import "./scss/app.scss";
 
-import imgur from "./services/imgur";
+// import imgur from "./services/imgur";
 import * as utils from "./utils";
+import gifs_url from "./data";
 
 // Player for Youtube API Iframe
 let player = null;
 
-// Imgur Albums Hash with Lofi Pictures GIF
-const albums = ["wUOIjM7"];
+const timer = {
+  current_time: null,
+  init(on_update_timer) {
+    this.on_update_timer = on_update_timer;
+    this.update_timer();
+  },
+  update_timer() {
+    const date = new Date();
 
-// All URL for GIF's
-let gifs_url = [];
+    const hours = utils.format_number(date.getHours());
+    const sec = utils.format_number(date.getSeconds());
+    const min = utils.format_number(date.getMinutes());
 
-const init_gifs = async () => {
-  for (const album_hash of albums) {
-    gifs_url.push(...(await imgur.get_imgur_images_url(album_hash)));
-  }
+    this.current_time = utils.format_hour(hours, min, sec);
+    this.on_update_timer(this);
+
+    setTimeout(() => this.update_timer(), 1000);
+  },
 };
 
 const render_gifs = () => {
@@ -23,34 +32,42 @@ const render_gifs = () => {
 
   const img = utils.create_el("img");
 
-  let last_gif = 0;
+  let current_gif = utils.random_number(0, gifs_url.length - 1);
 
   const render_next_gif = () => {
-    const is_last = last_gif === gifs_url.length - 1;
+    const new_gif = utils.distinct_random_number(
+      0,
+      gifs_url.length - 1,
+      current_gif
+    );
+    current_gif = new_gif;
 
-    const next_url = is_last ? gifs_url[0] : gifs_url[last_gif];
+    const next_gif_url = gifs_url[current_gif];
 
-    last_gif = is_last ? 0 : last_gif + 1;
+    img.src = next_gif_url;
 
-    img.src = next_url;
-
-    setTimeout(() => {
-      render_next_gif();
-      // }, 120000);
-    }, 5000);
+    setTimeout(render_next_gif, 5000);
   };
   render_next_gif();
 
   root.appendChild(img);
 };
-const render_components = () => {};
+
+const render_components = () => {
+  const timer_display = utils.get_by_id("timer");
+
+  const on_update_timer = ({ current_time }) =>
+    (timer_display.textContent = current_time);
+
+  timer.init(on_update_timer);
+};
 
 const init_player = () => {
   const on_player_ready = () => player.setPlaybackQuality("small");
   player = new YT.Player("player", {
     controls: "0",
-    height: "360",
-    width: "640",
+    height: "300",
+    width: "300",
     playerVars: {
       controls: "0",
       listType: "playlis",
@@ -64,7 +81,6 @@ const init_player = () => {
 };
 
 const init = async () => {
-  await init_gifs();
   await render_gifs();
   await render_components();
   await init_player();
