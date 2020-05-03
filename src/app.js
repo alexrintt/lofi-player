@@ -142,6 +142,12 @@ const init_player = async () => {
     hide_loader();
   };
 
+  const on_player_state_change = (e) => {
+    const current_song_button = utils.get_by_id("current-song");
+    console.log(e.target.playerInfo.videoUrl);
+    current_song_button.setAttribute("href", e.target.playerInfo.videoUrl);
+  };
+
   player = new YT.Player("player", {
     height: "300",
     width: "300",
@@ -151,6 +157,7 @@ const init_player = async () => {
     },
     events: {
       onReady: on_player_ready,
+      onStateChange: on_player_state_change,
     },
   });
 };

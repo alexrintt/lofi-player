@@ -9,8 +9,6 @@ const get_playlist = async (id) => {
   url.set("key", config.API_KEY);
   url.set("part", "id");
 
-  console.log(baseURL + "?" + url.toString());
-
   const request = await fetch(baseURL + "?" + url.toString());
 
   const response = await request.json();
