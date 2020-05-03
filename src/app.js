@@ -144,7 +144,6 @@ const init_player = async () => {
 
   const on_player_state_change = (e) => {
     const current_song_button = utils.get_by_id("current-song");
-    console.log(e.target.playerInfo.videoUrl);
     current_song_button.setAttribute("href", e.target.playerInfo.videoUrl);
   };
 
