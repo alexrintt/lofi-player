@@ -1,6 +1,6 @@
 import "./scss/app.scss";
 
-// import imgur from "./services/imgur";
+import quotes from "./services/quotes";
 import * as utils from "./utils";
 import gifs_url from "./data";
 
@@ -53,13 +53,29 @@ const render_gifs = () => {
   root.appendChild(img);
 };
 
-const render_components = () => {
+const render_timer = () => {
   const timer_display = utils.get_by_id("timer");
 
   const on_update_timer = ({ current_time }) =>
     (timer_display.textContent = current_time);
 
   timer.init(on_update_timer);
+};
+
+const render_quote = async () => {
+  const quote_display = utils.get_by_id("quote");
+
+  const all_quotes = await quotes.get_quotes();
+
+  const current_quote =
+    all_quotes[utils.random_number(0, gifs_url.length - 1)].text;
+
+  quote_display.textContent = current_quote;
+};
+
+const render_components = () => {
+  render_timer();
+  render_quote();
 };
 
 const init_player = () => {
