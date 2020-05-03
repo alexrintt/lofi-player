@@ -110,9 +110,28 @@ const render_quote = async () => {
 const render_controls = () => {
   const control_left = utils.query(".buttons-wrapper.left");
   const control_right = utils.query(".buttons-wrapper.right");
+  const control_play = utils.query(".buttons-wrapper.play");
+
+  const control_play_icon = utils.query(".button-play");
+
+  const toggle_play = () => {
+    console.log(player);
+
+    const is_playing = player.getPlayerState() === 1;
+
+    console.log(is_playing);
+
+    control_play_icon.classList.add(is_playing ? "paused" : "playing");
+    control_play_icon.classList.remove(is_playing ? "playing" : "paused");
+
+    is_playing ? player.pauseVideo() : player.playVideo();
+  };
 
   control_left.onclick = () => player.previousVideo();
   control_right.onclick = () => player.nextVideo();
+  control_play.onclick = () => toggle_play();
+
+  toggle_play();
 };
 
 // ========================================================================================
@@ -140,6 +159,7 @@ const init_player = async () => {
     });
 
     hide_loader();
+    render_components();
   };
 
   const on_player_state_change = (e) => {
@@ -166,7 +186,6 @@ const init_player = async () => {
 // ========================================================================================
 const init = async () => {
   await render_gifs();
-  await render_components();
   await init_player();
 };
 

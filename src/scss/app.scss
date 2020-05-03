@@ -243,6 +243,7 @@ body {
 }
 
 .dot {
+  transition: all 0.2s ease-in-out;
   position: absolute;
   width: 5px;
   height: 5px;
@@ -275,6 +276,57 @@ body {
   .dot-5 {
     top: 20px;
     left: 10px;
+  }
+}
+.button-play {
+  &.paused {
+    .dot-1 {
+      top: 0;
+      left: 0;
+      height: 20px;
+    }
+    .dot-2 {
+      top: 5px;
+      left: 5px;
+      height: 10px;
+    }
+    .dot-3 {
+      top: 10px;
+      left: 10px;
+    }
+    .dot-4 {
+      top: 15px;
+      left: 5px;
+    }
+    .dot-5 {
+      top: 20px;
+      left: 0px;
+    }
+  }
+  &.playing {
+    .dot-1 {
+      top: 0;
+      left: 0;
+      height: 20px;
+    }
+    .dot-2 {
+      top: 0;
+      left: 10px;
+      height: 10px;
+    }
+    .dot-3 {
+      top: 10px;
+      left: 10px;
+    }
+    .dot-4 {
+      top: 15px;
+      left: 10px;
+      height: 10px;
+    }
+    .dot-5 {
+      top: 20px;
+      left: 0px;
+    }
   }
 }
 .button-right {
