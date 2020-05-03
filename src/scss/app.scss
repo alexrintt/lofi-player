@@ -1,8 +1,8 @@
 @import url(http://db.onlinewebfonts.com/c/46ed1daa8d58529ffb76987f884f2b03?family=Hardpixel);
 
-$bg-color: #4242e6;
-$glitch-bg-color: $bg-color;
-
+// ========================================================
+// RESET
+// ========================================================
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,6 +10,8 @@ $glitch-bg-color: $bg-color;
   list-style: none;
   outline: none;
   font-family: "Hardpixel", serif;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -17,6 +19,87 @@ body {
   line-height: 1.5;
   overflow: hidden;
 }
+
+// ========================================================
+// FOOTER LINK STYLES
+// ========================================================
+.links-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.links-container {
+  display: flex;
+}
+.external-link {
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    .external-link-text {
+      color: #fff;
+    }
+    .external-link-icon {
+      border: 3px solid #fff;
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+    .external-link-icon-arrow {
+      background: #fff;
+    }
+    .arrow-end {
+      width: 8px;
+      height: 8px;
+      transform: translateX(95%) rotate(180deg);
+      border: 4px solid transparent;
+      border-right-color: #fff;
+    }
+  }
+}
+.external-link-text {
+  margin-left: 10px;
+  color: #d9d9d9;
+  text-shadow: 1px 1px 0px rgba(30, 50, 40, 0.5);
+  font-size: max(0.5vw, 14px);
+}
+.external-link-icon {
+  width: 15px;
+  height: 15px;
+  border: 3px solid #d9d9d9;
+  box-shadow: -1px 1px 0px rgba(30, 50, 40, 0.5);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  position: relative;
+}
+.external-link-icon-arrow {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #d9d9d9;
+  box-shadow: 1px 1px 0px rgba(30, 50, 40, 0.5);
+  top: 50%;
+  left: 0;
+  transform: translate(25%, -130%) rotate(-45deg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.arrow-end {
+  width: 8px;
+  height: 8px;
+  transform: translateX(95%) rotate(180deg);
+  border: 4px solid transparent;
+  border-right-color: #d9d9d9;
+}
+
+// ========================================================
+// TOP LOADER
+// ========================================================
 .loader {
   position: fixed;
   top: 0%;
@@ -46,6 +129,11 @@ body {
     }
   }
 }
+
+// ========================================================
+// WRAPPER FOR GIF, IMAGE
+// ========================================================
+
 #main {
   width: 100%;
   height: 100vh;
@@ -56,6 +144,10 @@ body {
     object-position: center;
   }
 }
+
+// ========================================================
+// WRAPPER CLOCK, QUOTE AND CONTROLS
+// ========================================================
 #content {
   padding: 1rem;
   position: absolute;
@@ -72,6 +164,10 @@ body {
     user-select: none;
   }
 }
+
+// ========================================================
+// TIMER, CLOCK STYLES
+// ========================================================
 #timer {
   width: max(30vw, 300px);
   letter-spacing: 5px;
@@ -79,15 +175,27 @@ body {
   color: #f5f5f5;
   text-shadow: 5px 5px 0px #020406;
 }
+
+// ========================================================
+// PHRASE, QUOTE STYLES
+// ========================================================
 #quote {
   letter-spacing: 2px;
   font-size: max(0.5vw, 14px);
   text-shadow: 1px 1px 0px rgba(30, 50, 40, 0.5);
   color: #d9d9d9;
 }
+
+// ========================================================
+// HIDDE YOUTUBE IFRAME, TO KEEP ONLY SONG
+// ========================================================
 #player {
   display: none !important;
 }
+
+// ========================================================
+// PIXELATED CONTROLS TO NEXT AND PREV
+// ========================================================
 #button-controls {
   width: 250px;
   display: flex;
