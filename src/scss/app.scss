@@ -15,12 +15,46 @@ $glitch-bg-color: $bg-color;
 body {
   color: #fff;
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow: hidden;
 }
+.loader {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 4px;
+  width: 0%;
+  background: #fff;
 
+  &.loading {
+    animation: loader 1s ease-in-out 0s infinite;
+  }
+  &.static {
+    animation: none;
+  }
+
+  @keyframes loader {
+    0% {
+      width: 0%;
+      left: 0%;
+    }
+    50% {
+      width: 100%;
+    }
+    100% {
+      width: 0%;
+      left: 100%;
+    }
+  }
+}
 #main {
   width: 100%;
   height: 100vh;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 #content {
   padding: 1rem;
@@ -28,12 +62,18 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   * {
     text-align: center;
     user-select: none;
   }
 }
 #timer {
+  width: max(30vw, 300px);
   letter-spacing: 5px;
   font-size: max(7vw, 60px);
   color: #f5f5f5;
@@ -45,15 +85,92 @@ body {
   text-shadow: 1px 1px 0px rgba(30, 50, 40, 0.5);
   color: #d9d9d9;
 }
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-h1 {
-  color: #000;
-}
 #player {
   display: none !important;
+}
+#button-controls {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.buttons-wrapper {
+  margin: 1rem 0;
+  display: flex;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  &.left:hover {
+    transform: translateX(-5px);
+    .dot {
+      background: #fff;
+    }
+  }
+  &.right:hover {
+    transform: translateX(5px);
+    .dot {
+      background: #fff;
+    }
+  }
+}
+
+.button-container {
+  padding: 8px;
+}
+
+.dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #d9d9d9;
+  box-shadow: 1px 1px 0px rgba(30, 50, 40, 0.5);
+}
+
+.button {
+  position: relative;
+  width: 15px;
+  height: 25px;
+}
+.button-left {
+  .dot-1 {
+    top: 0;
+    left: 10px;
+  }
+  .dot-2 {
+    top: 5px;
+    left: 5px;
+  }
+  .dot-3 {
+    top: 10px;
+    left: 0px;
+  }
+  .dot-4 {
+    top: 15px;
+    left: 5px;
+  }
+  .dot-5 {
+    top: 20px;
+    left: 10px;
+  }
+}
+.button-right {
+  .dot-1 {
+    top: 0;
+    left: 0;
+  }
+  .dot-2 {
+    top: 5px;
+    left: 5px;
+  }
+  .dot-3 {
+    top: 10px;
+    left: 10px;
+  }
+  .dot-4 {
+    top: 15px;
+    left: 5px;
+  }
+  .dot-5 {
+    top: 20px;
+    left: 0px;
+  }
 }

@@ -1,2 +1,5 @@
-import sdk from "./sdk";
-import config from "./config";
+import * as google from "./sdk";
+
+export default {
+  ...google,
+};
