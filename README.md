@@ -20,6 +20,9 @@
 # What is it?
 Its a simple and minimalist Player with Lofi usic style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
 
+# 8BitDash
+All these amazing gifs and images that are used as a background are from this project: http://www.8bitdash.com/ and its repository https://github.com/andumorie/8bitdash.github.io and they have a store in which sell these gifs: https://8bitdash.threadless.com/
+
 # Creators
 <table>
   <tr>
