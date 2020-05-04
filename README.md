@@ -7,8 +7,9 @@
 <p align="center">
   <img  src="https://img.shields.io/badge/application-player-blue" alt="Application Type" />
   <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
-  <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet" alt="Repo Main Language" />
-  <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success" alt="Repo Main Language" />
+  <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet" alt="Module Bundler" />
+  <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success" alt="Repo API" />
+  <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
 </p>
 <p>
   <img src="./public/pt-br.png" alt="Portuguese" height="16">
