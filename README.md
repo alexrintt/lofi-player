@@ -18,7 +18,7 @@
 </p>
 
 # What is it?
-Its a simple and minimalist Player with Lofi usic style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
+Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
 
 # How to clone project
 > _Note, dont forget to create a .env file with your Google API Credentials
