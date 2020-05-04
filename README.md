@@ -14,7 +14,7 @@
 
 <p>
   <img src="./public/pt-br.png" alt="Portuguese" height="16">
-  <a href="https://github.com/LaksCastro/starry-sky/blob/master/README-ptbr.md">Ler em português</a>
+  <a href="https://github.com/LaksCastro/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
 </p>
 
 # What is it?
