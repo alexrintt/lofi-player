@@ -17,11 +17,34 @@ const playlist_id = "PLuCUpg5b_vRqWMNwIH5oazz_qD170NtI4";
 let player = null;
 
 // ========================================================================================
+// ALL NECESSARY NODE ELEMENTS
+// ========================================================================================
+
+// For root
+const root = utils.get_by_id("main");
+
+// For loader
+const loader = utils.query(".loader");
+
+// For quote
+const quote_display = utils.get_by_id("quote");
+
+// For controls
+const control_left = utils.query(".buttons-wrapper.left");
+const control_right = utils.query(".buttons-wrapper.right");
+const control_play = utils.query(".buttons-wrapper.play");
+const control_play_icon = utils.query(".button-play");
+
+// For current song external link
+const current_song_button = utils.get_by_id("current-song");
+
+// For timer
+const timer_display = utils.get_by_id("timer");
+
+// ========================================================================================
 // ADD STATIC CLASS TO LOADER TAG TO HIDE FROM UI
 // ========================================================================================
 const hide_loader = () => {
-  const loader = utils.query(".loader");
-
   loader.classList.remove("loading");
   loader.classList.add("static");
 };
@@ -30,8 +53,6 @@ const hide_loader = () => {
 // RENDER GIF IN A IMG TAG AND ADD LOOP TO EVERY 5S CHANGE GIF
 // ========================================================================================
 const render_gifs = () => {
-  const root = utils.get_by_id("main");
-
   const img = utils.create_el("img");
 
   let current_gif = utils.random_number(0, gifs_url.length - 1);
@@ -82,8 +103,6 @@ const render_timer = () => {
     },
   };
 
-  const timer_display = utils.get_by_id("timer");
-
   const on_update_timer = ({ current_time }) =>
     (timer_display.textContent = current_time);
 
@@ -94,8 +113,6 @@ const render_timer = () => {
 // GET A RANDOM QUOTE FROM OVER 1000 API QUOTES
 // ========================================================================================
 const render_quote = async () => {
-  const quote_display = utils.get_by_id("quote");
-
   const all_quotes = await quotes.get_quotes();
 
   const current_quote =
@@ -107,31 +124,27 @@ const render_quote = async () => {
 // ========================================================================================
 // ADD FUNCIONALITY TO PLAYER : LEFT TO PLAY PREVIOUS SONG, AND RIGHT TO PLAY NEXT SONG
 // ========================================================================================
+const render_player_ui = () => {
+  const is_playing = player.getPlayerState() === 1;
+
+  console.log(is_playing);
+
+  control_play_icon.classList.add(is_playing ? "playing" : "paused");
+  control_play_icon.classList.remove(is_playing ? "paused" : "playing");
+};
+
+const toggle_player_state = () => {
+  const is_playing = player.getPlayerState() === 1;
+
+  console.log(is_playing);
+
+  is_playing ? player.pauseVideo() : player.playVideo();
+};
+
 const render_controls = () => {
-  const control_left = utils.query(".buttons-wrapper.left");
-  const control_right = utils.query(".buttons-wrapper.right");
-  const control_play = utils.query(".buttons-wrapper.play");
-
-  const control_play_icon = utils.query(".button-play");
-
-  const toggle_play = () => {
-    console.log(player);
-
-    const is_playing = player.getPlayerState() === 1;
-
-    console.log(is_playing);
-
-    control_play_icon.classList.add(is_playing ? "paused" : "playing");
-    control_play_icon.classList.remove(is_playing ? "playing" : "paused");
-
-    is_playing ? player.pauseVideo() : player.playVideo();
-  };
-
   control_left.onclick = () => player.previousVideo();
   control_right.onclick = () => player.nextVideo();
-  control_play.onclick = () => toggle_play();
-
-  toggle_play();
+  control_play.onclick = () => toggle_player_state();
 };
 
 // ========================================================================================
@@ -157,14 +170,14 @@ const init_player = async () => {
       startSeconds: 0,
       suggestedQuality: "small",
     });
-
     hide_loader();
-    render_components();
   };
 
   const on_player_state_change = (e) => {
-    const current_song_button = utils.get_by_id("current-song");
+    // To set the current song/video URL in external link "current song"
     current_song_button.setAttribute("href", e.target.playerInfo.videoUrl);
+
+    render_player_ui();
   };
 
   player = new YT.Player("player", {
@@ -186,6 +199,7 @@ const init_player = async () => {
 // ========================================================================================
 const init = async () => {
   await render_gifs();
+  await render_components();
   await init_player();
 };
 
