@@ -127,16 +127,12 @@ const render_quote = async () => {
 const render_player_ui = () => {
   const is_playing = player.getPlayerState() === 1;
 
-  console.log(is_playing);
-
   control_play_icon.classList.add(is_playing ? "playing" : "paused");
   control_play_icon.classList.remove(is_playing ? "paused" : "playing");
 };
 
 const toggle_player_state = () => {
   const is_playing = player.getPlayerState() === 1;
-
-  console.log(is_playing);
 
   is_playing ? player.pauseVideo() : player.playVideo();
 };
