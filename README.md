@@ -6,6 +6,8 @@
 <p align="center">A minimal music Lofi-Player with Youtube Data v3 API, IFrame API and a loot of JavaScript</p>
 <p align="center">
   <img  src="https://img.shields.io/badge/application-player-blue" alt="Application Type" />
+  <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
+  <img  src="https://img.shields.io/badge/module-bundler-parcel-blueviolet" alt="Repo Main Language" />
 </p>
 <p>
   <img src="./public/pt-br.png" alt="Portuguese" height="16">
