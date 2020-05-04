@@ -22,7 +22,7 @@ Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS
 
 # How to clone project
 > _Note, dont forget to create a .env file with your Google API Credentials
-in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries_
+in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries._
 - To clone this repo
 ```
 git clone https://github.com/LaksCastro/lofi-player.git
