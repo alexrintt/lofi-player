@@ -17,4 +17,4 @@
   <a href="https://github.com/LaksCastro/starry-sky/blob/master/README-ptbr.md">Ler em português</a>
 </p>
 
-# What
+# What is it?
