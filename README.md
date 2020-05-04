@@ -3,7 +3,7 @@
 </p>
 <p align="center">⭐⭐⭐⭐⭐</p>
 <h1 align="center">Lofi Player</h1>
-<p align="center">A minimal music Lofi-Player with Youtube Data v3 API, IFrame API and a loot of JavaScript</p>
+<p align="center">A minimal music Lofi-Player with Youtube Data v3 API, Iframe API and a loot of JavaScript</p>
 <p align="center">
   <img  src="https://img.shields.io/badge/application-music_player-blue" alt="Application Type" />
   <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
@@ -18,3 +18,4 @@
 </p>
 
 # What is it?
+Its a simple and minimalist Player with Lofi usic style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
