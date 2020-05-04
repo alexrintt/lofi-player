@@ -18,6 +18,9 @@
   <a href="https://github.com/LaksCastro/lofi-player/blob/master/README.md">Read in English</a>
 </p>
 
+# Live On
+Aproveite [clicando aqui](https://lakscastro.github.io/lofi-player/)
+
 # O que é isso?
 É um Player simples, focado no minimalismo e no estilo de música Lofi, construído em HTML, CSS e JavaScript, e usa a Youtube Data API v3 para pegar o tamanho da playlist e a Youtube Iframe API para renderizar a playlist em background como se fosse áudio. Parcel foi o module bundler escolhido por ser bem simples, o que é perfeito pra esse projeto.
 
