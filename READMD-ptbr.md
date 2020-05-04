@@ -53,7 +53,7 @@ npm run build
 ```
 
 # 8BitDash
-All these amazing gifs and images that are used as a background are from this project: http://www.8bitdash.com/ and its repository https://github.com/andumorie/8bitdash.github.io and they have a store in which sell these gifs: https://8bitdash.threadless.com/
+Todos esses incríveis gifs e imagens que são usadas de fundo, pertencem à [este projeto](http://www.8bitdash.com/) e à [este repositório](https://github.com/andumorie/8bitdash.github.io/), e eles vendem estes gifs [nesta loja](https://8bitdash.threadless.com/)
 
 # Creators
 <table>
