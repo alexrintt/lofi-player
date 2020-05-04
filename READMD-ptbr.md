@@ -3,7 +3,7 @@
 </p>
 <p align="center">⭐⭐⭐⭐⭐</p>
 <h1 align="center">Lofi Player</h1>
-<p align="center">A minimal music Lofi-Player with Youtube Data v3 API, Iframe API and a loot of JavaScript</p>
+<p align="center">Um Player de Lofi minimalista, que usa a API v3 do Youtube, API de Iframe, e bastante JavaScript</p>  
 <p align="center">
   <img  src="https://img.shields.io/badge/application-music_player-blue" alt="Application Type" />
   <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
