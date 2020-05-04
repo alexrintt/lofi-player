@@ -12,13 +12,14 @@
   <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
 </p>
 
+
 <p>
   <img src="./public/en.png" alt="English" height="16">
   <a href="https://github.com/LaksCastro/starry-sky/blob/master/README.md">Read in English</a>
 </p>
 
-# What is it?
-Its a simple and minimalist Player with Lofi usic style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
+# O que é isso?
+É um Player simples, focado no minimalismo e no estilo de música Lofi, construído em HTML, CSS e JavaScript, e usa a Youtube Data API v3 para pegar o tamanho da playlist e a Youtube Iframe API para renderizar a playlist em background como se fosse áudio. Parcel foi o module bundler escolhido por ser bem simples, o que é perfeito pra esse projeto.
 
 # How to clone project
 > _Note, dont forget to create a .env file with your Google API Credentials
