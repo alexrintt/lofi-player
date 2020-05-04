@@ -7,7 +7,7 @@
 <p align="center">
   <img  src="https://img.shields.io/badge/application-player-blue" alt="Application Type" />
   <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
-  <img  src="https://img.shields.io/badge/module-bundler-parcel-blueviolet" alt="Repo Main Language" />
+  <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet" alt="Repo Main Language" />
 </p>
 <p>
   <img src="./public/pt-br.png" alt="Portuguese" height="16">
