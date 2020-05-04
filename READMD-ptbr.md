@@ -21,33 +21,32 @@
 # O que é isso?
 É um Player simples, focado no minimalismo e no estilo de música Lofi, construído em HTML, CSS e JavaScript, e usa a Youtube Data API v3 para pegar o tamanho da playlist e a Youtube Iframe API para renderizar a playlist em background como se fosse áudio. Parcel foi o module bundler escolhido por ser bem simples, o que é perfeito pra esse projeto.
 
-# How to clone project
-> _Note, dont forget to create a .env file with your Google API Credentials
-in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries_
-- To clone this repo
+# Como clonar esse projeto
+> _Nota, não esqueça de criar o arquivo .env com as suas Google API Credentials, elas estão disponíveis para serem criadas e gerenciadas em [Google Developers Console](https://console.developers.google.com/apis/dashboard) and ative o Youtube Data API v3 na biblioteca de API's
+- Clonar o repositório
 ```
 git clone https://github.com/LaksCastro/lofi-player.git
 ```
-- To change path
+- Mudar a pasta
 ```
 cd lofi-player
 ```
-- To install dependencies
+- Instalar as dependências
 ```
 yarn install
 npm install
 ```
-- To run development server
+- Rodar o servidor de desenvolvimento
 ```
 yarn dev
 npm run dev
 ```
-- To create static files
+- Gerar os arquivos estáticos
 ```
 yarn pre-build 
 npm run pre-build
 ```
-- To deploy to github pages
+- Deploy com o Github Pages
 ```
 yarn build
 npm run build
