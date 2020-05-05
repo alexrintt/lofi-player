@@ -14,7 +14,7 @@
 
 <p align="center">
   <a href="https://twitter.com/lakscastro" target="_blank">
-    <img src="https://img.shields.io/twitter/follow/lakscastro?logo=twitter" alt="Follow" />
+    <img src="https://img.shields.io/twitter/url?label=Follow%20%40LakCastro&logo=twitter&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
   </a>
   <a href="https://www.instagram.com/manno_eu/" target="_blank">
     <img src="https://img.shields.io/twitter/url?label=Follow%20%40Emmanuel&logo=instagram&url=https%3A%2F%2Fwww.instagram.com%2Fmanno_eu%2F" alt="Follow" />
