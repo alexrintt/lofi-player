@@ -9,7 +9,7 @@
   <img  src="https://img.shields.io/badge/language-javascript-yellow?style=for-the-badge" alt="Repo Main Language" />
   <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet?style=for-the-badge" alt="Module Bundler" />
   <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success?style=for-the-badge" alt="Repo API" />
-  <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
+  <img  src="https://img.shields.io/badge/type-project-green?style=for-the-badge" alt="Repo Type" />
 </p>
 
 <p align="center">
