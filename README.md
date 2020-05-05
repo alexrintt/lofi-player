@@ -9,12 +9,15 @@
   <img  src="https://img.shields.io/badge/language-javascript-yellow?style=for-the-badge" alt="Repo Main Language" />
   <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet?style=for-the-badge" alt="Module Bundler" />
   <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success?style=for-the-badge" alt="Repo API" />
-  <img  src="https://img.shields.io/badge/type-project-green?style=for-the-badge" alt="Repo Type" />
+  <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
 </p>
 
 <p align="center">
   <a href="https://twitter.com/lakscastro" target="_blank">
     <img src="https://img.shields.io/twitter/follow/LaksCastro?label=Follow%20%40LaksCastro?style=for-the-badge" alt="Follow" />
+  </a>
+  <a href="https://www.instagram.com/manno_eu/" target="_blank">
+    <img src="https://img.shields.io/twitter/url?label=Follow%20%40Emmanuel&logo=instagram&style=for-the-badge&url=https%3A%2F%2Fwww.instagram.com%2Fmanno_eu%2F" alt="Follow" />
   </a>
 </p>
 
