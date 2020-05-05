@@ -10,6 +10,9 @@
   <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet" alt="Module Bundler" />
   <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success" alt="Repo API" />
   <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
+</p>
+
+<p>
   <img  src="https://img.shields.io/twitter/follow/LaksCastro?label=Follow%20%40LaksCastro" alt="Follow" />
 </p>
 
