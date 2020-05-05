@@ -5,16 +5,16 @@
 <h1 align="center">Lofi Player</h1>
 <p align="center">A minimal music Lofi-Player with Youtube Data v3 API, Iframe API and a loot of JavaScript</p>
 <p align="center">
-  <img  src="https://img.shields.io/badge/application-music_player-blue" alt="Application Type" />
-  <img  src="https://img.shields.io/badge/language-javascript-yellow" alt="Repo Main Language" />
-  <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet" alt="Module Bundler" />
-  <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success" alt="Repo API" />
-  <img  src="https://img.shields.io/badge/type-project-green" alt="Repo Type" />
+  <img  src="https://img.shields.io/badge/application-music_player-blue?style=for-the-badge" alt="Application Type" />
+  <img  src="https://img.shields.io/badge/language-javascript-yellow?style=for-the-badge" alt="Repo Main Language" />
+  <img  src="https://img.shields.io/badge/bundler-parcel-blueviolet?style=for-the-badge" alt="Module Bundler" />
+  <img  src="https://img.shields.io/badge/api-youtube_iframe_google-success?style=for-the-badge" alt="Repo API" />
+  <img  src="https://img.shields.io/badge/type-project-green?style=for-the-badge" alt="Repo Type" />
 </p>
 
 <p align="center">
   <a href="https://twitter.com/lakscastro" target="_blank">
-    <img src="https://img.shields.io/twitter/follow/LaksCastro?label=Follow%20%40LaksCastro" alt="Follow" />
+    <img src="https://img.shields.io/twitter/follow/LaksCastro?label=Follow%20%40LaksCastro?style=for-the-badge" alt="Follow" />
   </a>
 </p>
 
