@@ -26,7 +26,7 @@
   </a>
   </a>
     <a href="https://www.linkedin.com/in/emmanuel-messias-535621127/" target="_blank">
-    <img src="https://img.shields.io/twitter/url?label=Connect%20%40LaksCastro&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
+    <img src="https://img.shields.io/twitter/url?label=Connect%20%40Emmanuel&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
   </a>
 </p>
 
