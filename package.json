@@ -1,26 +1,25 @@
 {
   "name": "lofi-player",
   "version": "1.0.0",
-  "description": "Simple workflow starter for building vanilla JS apps",
+  "description": "A Lofi Player builded with HTML, CSS and Javascript using Parcel as Module Bundler",
   "main": "index.js",
   "scripts": {
     "dev": "parcel public/index.html --out-dir development -p 3000",
-    "pre-deploy": "parcel build public/index.html --out-dir dist --public-url ./",
+    "pre-deploy": "parcel build public/index.html --out-dir dist --public-url /lofi-player",
     "deploy": "node publish"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bradtraversy/vanilla-parcel-boilerplate.git"
+    "url": "git+https://github.com/LaksCastro/lofi-player.git"
   },
   "keywords": [
     "parcel"
   ],
-  "author": "Brad Traversy",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/bradtraversy/vanilla-parcel-boilerplate/issues"
   },
-  "homepage": "https://github.com/bradtraversy/vanilla-parcel-boilerplate#readme",
+  "homepage": "https://lakscastro.github.io/lofi-player",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/plugin-transform-runtime": "^7.9.0",
