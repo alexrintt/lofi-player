@@ -30,6 +30,10 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="./docs/lofi-player.gif" width="350">
+</p>
+
 <p>
   <img src="./public/en.png" alt="English" height="16">
   <a href="https://github.com/LaksCastro/lofi-player/blob/master/README.md">Read in English</a>
