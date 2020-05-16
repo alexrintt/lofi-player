@@ -20,7 +20,7 @@ jobs:
           hugo-version: "0.68.3"
 
       - name: Pre Build
-        run: yarn pre-deploy
+        run: GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} yarn pre-deploy
 
       - name: Build
         run: yarn deploy
