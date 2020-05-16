@@ -29,15 +29,15 @@
     <img src="https://img.shields.io/twitter/url?label=Connect%20%40Emmanuel&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
   </a>
 </p>
-<p>
-  <img src="./public/pt-br.png" alt="Portuguese" height="16">
-  <a href="https://github.com/LaksCastro/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
-</p>
 
 <p align="center">
   <img src="./docs/lofi-player.gif" width="350">
 </p>
 
+<p>
+  <img src="./public/pt-br.png" alt="Portuguese" height="16">
+  <a href="https://github.com/LaksCastro/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
+</p>
 
 # Live On
 Enjoy [clicking here](https://lakscastro.github.io/lofi-player/)
