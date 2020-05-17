@@ -35,7 +35,7 @@
 </p>
 
 <p>
-  <img src="./public/en.png" alt="English" height="16">
+  <img src="./docs/en.png" alt="English" height="16">
   <a href="https://github.com/LaksCastro/lofi-player/blob/master/README.md">Read in English</a>
 </p>
 

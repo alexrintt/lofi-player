@@ -35,52 +35,69 @@
 </p>
 
 <p>
-  <img src="./public/pt-br.png" alt="Portuguese" height="16">
+  <img src="./docs/pt-br.png" alt="Portuguese" height="16">
   <a href="https://github.com/LaksCastro/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
 </p>
 
 # Live On
+
 Enjoy [clicking here](https://lakscastro.github.io/lofi-player/)
 
 # What is it?
+
 Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
 
 # How to clone project
+
 > _Note, dont forget to create a .env file with your Google API Credentials
-in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries._
+> in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries._
+
 - To clone this repo
+
 ```
 git clone https://github.com/LaksCastro/lofi-player.git
 ```
+
 - To change path
+
 ```
 cd lofi-player
 ```
+
 - To install dependencies
+
 ```
 yarn install
 npm install
 ```
+
 - To run development server
+
 ```
 yarn dev
 npm run dev
 ```
+
 - To create static files
+
 ```
-yarn pre-build 
+yarn pre-build
 npm run pre-build
 ```
+
 - To deploy to github pages
+
 ```
 yarn build
 npm run build
 ```
 
 # 8BitDash
+
 All these amazing gifs and images that are used as a background are from [this project](http://www.8bitdash.com/) and [its repository](https://github.com/andumorie/8bitdash.github.io/) and they have a store in which sell [these gifs](https://8bitdash.threadless.com/).
 
 # Creators
+
 <table>
   <tr>
     <td align="center">
@@ -96,4 +113,3 @@ All these amazing gifs and images that are used as a background are from [this p
       </a>
     </td>
  </table>
- 
