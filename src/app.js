@@ -42,11 +42,21 @@ const current_song_button = utils.get_by_id("current-song");
 const timer_display = utils.get_by_id("timer");
 
 // ========================================================================================
-// ADD STATIC CLASS TO LOADER TAG TO HIDE FROM UI
+// WRAPPER FUNCTION TO GET PLAYER STATE, IF IS PLAYING OR NOT
 // ========================================================================================
-const hide_loader = () => {
-  loader.classList.remove("loading");
-  loader.classList.add("static");
+const yt_is_playing = () => player.getPlayerState() === 1;
+
+// ========================================================================================
+// MANAGE CLASS TO LOADER TAG TO HIDE OR SHOW FROM UI
+// ========================================================================================
+const render_loader_ui = () => {
+  if (yt_is_playing()) {
+    loader.classList.remove("loading");
+    loader.classList.add("static");
+    return;
+  }
+  loader.classList.remove("static");
+  loader.classList.add("loading");
 };
 
 // ========================================================================================
@@ -58,11 +68,7 @@ const render_gifs = () => {
   let current_gif = utils.random_number(0, gifs_url.length - 1);
 
   const render_next_gif = () => {
-    const new_gif = utils.distinct_random_number(
-      0,
-      gifs_url.length - 1,
-      current_gif
-    );
+    const new_gif = utils.random_number(0, gifs_url.length - 1);
     current_gif = new_gif;
 
     const next_gif_url = gifs_url[current_gif];
@@ -125,7 +131,7 @@ const render_quote = async () => {
 // ADD FUNCIONALITY TO PLAYER : LEFT TO PLAY PREVIOUS SONG, AND RIGHT TO PLAY NEXT SONG
 // ========================================================================================
 const render_player_ui = () => {
-  const is_playing = player.getPlayerState() === 1;
+  const is_playing = yt_is_playing();
 
   control_play_icon.classList.add(is_playing ? "playing" : "paused");
   control_play_icon.classList.remove(is_playing ? "paused" : "playing");
@@ -166,13 +172,13 @@ const init_player = async () => {
       startSeconds: 0,
       suggestedQuality: "small",
     });
-    hide_loader();
   };
 
   const on_player_state_change = (e) => {
     // To set the current song/video URL in external link "current song"
     current_song_button.setAttribute("href", e.target.playerInfo.videoUrl);
 
+    render_loader_ui();
     render_player_ui();
   };
 
