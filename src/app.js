@@ -42,6 +42,10 @@ const current_song_button = utils.get_by_id("current-song");
 // For timer
 const timer_display = utils.get_by_id("timer");
 
+// For volume
+const vol_level_key = "app__vol__level";
+let vol_level = Number(localStorage.getItem(vol_level_key)) || 100;
+
 // ========================================================================================
 // WRAPPER FUNCTION TO GET PLAYER STATE, IF IS PLAYING OR NOT
 // ========================================================================================
@@ -53,9 +57,13 @@ const yt_is_playing = () => player.getPlayerState() === 1;
 const on_vol_input = ({ target: { value } }) => {
   if (!player) return;
 
-  console.log("akaoe");
-  player.setVolume(value);
+  vol_level = value;
+
+  player.setVolume(vol_level);
+
+  localStorage.setItem(vol_level_key, value);
 };
+control_vol.value = vol_level;
 control_vol.oninput = on_vol_input;
 
 // ========================================================================================
@@ -192,6 +200,8 @@ const init_player = async () => {
 
     render_loader_ui();
     render_player_ui();
+
+    player.setVolume(vol_level);
   };
 
   player = new YT.Player("player", {
