@@ -34,6 +34,7 @@ const control_left = utils.query(".buttons-wrapper.left");
 const control_right = utils.query(".buttons-wrapper.right");
 const control_play = utils.query(".buttons-wrapper.play");
 const control_play_icon = utils.query(".button-play");
+const control_vol = utils.get_by_id("button-vol-input");
 
 // For current song external link
 const current_song_button = utils.get_by_id("current-song");
@@ -45,6 +46,17 @@ const timer_display = utils.get_by_id("timer");
 // WRAPPER FUNCTION TO GET PLAYER STATE, IF IS PLAYING OR NOT
 // ========================================================================================
 const yt_is_playing = () => player.getPlayerState() === 1;
+
+// ========================================================================================
+// ADD VOLUMEN CHANGE LISTENER TO SET YOUTUBE IFRAME API
+// ========================================================================================
+const on_vol_input = ({ target: { value } }) => {
+  if (!player) return;
+
+  console.log("akaoe");
+  player.setVolume(value);
+};
+control_vol.oninput = on_vol_input;
 
 // ========================================================================================
 // MANAGE CLASS TO LOADER TAG TO HIDE OR SHOW FROM UI
