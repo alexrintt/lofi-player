@@ -158,14 +158,16 @@ const render_player_ui = () => {
 };
 
 const toggle_player_state = () => {
+  if(!player) return;
+  
   const is_playing = player.getPlayerState() === 1;
 
   is_playing ? player.pauseVideo() : player.playVideo();
 };
 
 const render_controls = () => {
-  control_left.onclick = () => player.previousVideo();
-  control_right.onclick = () => player.nextVideo();
+  control_left.onclick = () => player && player.previousVideo();
+  control_right.onclick = () => player && player.nextVideo();
   control_play.onclick = () => toggle_player_state();
 };
 
