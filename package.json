@@ -9,7 +9,7 @@
     "startURL": "/lofi-player/",
     "theme": "#020402",
     "generateIconOptions": {
-      "baseIcon": "./public/favicon.ico",
+      "baseIcon": "./public/android-chrome-384x384.png",
       "sizes": [
         32,
         64,
