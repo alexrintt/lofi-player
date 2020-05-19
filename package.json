@@ -5,22 +5,21 @@
   "main": "index.js",
   "pwaManifest": {
     "name": "Lofi Player",
-    "shortName": "LO",
+    "shortName": "L-Player",
     "startURL": "/lofi-player/",
     "theme": "#020402",
-    "icons": [
-      {
-        "src": "public/android-chrome-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-      },
-      {
-        "src": "public/android-chrome-384x384.png",
-        "sizes": "384x384",
-        "type": "image/png"
-      }
-    ],
-    "display": "standalone"
+    "generateIconOptions": {
+      "baseIcon": "./public/favicon.ico",
+      "sizes": [
+        32,
+        64,
+        192,
+        384,
+        512,
+        780
+      ],
+      "genFavicons": true
+    }
   },
   "scripts": {
     "dev": "parcel public/index.html --out-dir development -p 3000",
