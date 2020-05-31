@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-    <a href="https://www.linkedin.com/in/laks-castro-9ab09a18b/" target="_blank">
+  <a href="https://www.linkedin.com/in/laks-castro-9ab09a18b/" target="_blank">
     <img src="https://img.shields.io/twitter/url?label=Connect%20%40LaksCastro&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
   </a>
 </p>
@@ -21,7 +21,7 @@
   <a href="https://www.instagram.com/manno_eu/" target="_blank">
     <img src="https://img.shields.io/twitter/url?label=Follow%20%40Emmanuel&logo=instagram&url=https%3A%2F%2Fwww.instagram.com%2Fmanno_eu%2F" alt="Follow" />
   </a>
-  </a>
+  <a>
     <a href="https://www.linkedin.com/in/emmanuel-messias-535621127/" target="_blank">
     <img src="https://img.shields.io/twitter/url?label=Connect%20%40Emmanuel&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
   </a>
