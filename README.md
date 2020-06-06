@@ -121,7 +121,7 @@ All these amazing gifs and images that are used as a background are from [this p
 <p align="center">
   <sub>Copyright © 2020-present, Laks Castro.</sub>
 </p>
-<p align="center">Lofi Player <a href="https://github.com/LaksCastro/lofi-player/LICENSE.md">is MIT licensed 💖</a></p>
+<p align="center">Lofi Player <a href="https://github.com/LaksCastro/lofi-player/blob/master/LICENSE.md">is MIT licensed 💖</a></p>
 <p align="center">
   <img src="/public/favicon.png" width="35" />
 </p>
