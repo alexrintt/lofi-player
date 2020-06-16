@@ -89,6 +89,7 @@ const render_gifs = () => {
 
   const render_next_gif = () => {
     const new_gif = utils.random_number(0, gifs_url.length - 1);
+    
     current_gif = new_gif;
 
     const next_gif_url = gifs_url[current_gif];
