@@ -15,6 +15,7 @@ const playlist_id = "PLuCUpg5b_vRqWMNwIH5oazz_qD170NtI4";
 // PLAYER VAR FOR YOUTUBE API IFRAME
 // ========================================================================================
 let player = null;
+let songs_count;
 
 // ========================================================================================
 // ALL NECESSARY NODE ELEMENTS
@@ -75,6 +76,7 @@ const render_loader_ui = () => {
     loader.classList.add("static");
     return;
   }
+  
   loader.classList.remove("static");
   loader.classList.add("loading");
 };
@@ -166,10 +168,23 @@ const toggle_player_state = () => {
   is_playing ? player.pauseVideo() : player.playVideo();
 };
 
+const play_random_song = () => {
+  if(!player || !songs_count) return;
+  
+  player.loadPlaylist({
+    list: playlist_id,
+    listType: "playlist",
+    index: utils.random_number(0, songs_count - 1),
+    startSeconds: 0,
+    suggestedQuality: "small",
+  });
+}
+
 const render_controls = () => {
   control_left.onclick = () => player && player.previousVideo();
   control_right.onclick = () => player && player.nextVideo();
   control_play.onclick = () => toggle_player_state();
+  control_play.ondblclick = () => player && play_random_song();
 };
 
 // ========================================================================================
@@ -185,7 +200,7 @@ const render_components = () => {
 // FUNCTION TO INIT PLAYER FUNCTIONALITY USING YOUTUBE IFRAME API
 // ========================================================================================
 const init_player = async () => {
-  const songs_count = await google.get_playlist_count(playlist_id);
+  songs_count = await google.get_playlist_count(playlist_id);
 
   const on_player_ready = (e) => {
     e.target.loadPlaylist({
