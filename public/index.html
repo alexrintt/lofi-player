@@ -52,12 +52,49 @@
 
     <!-- Favicon -->
     <link rel="icon" href="./favicon.png" />
-
     <title>Lofi Player</title>
   </head>
 
   <body>
     <div class="loader loading"></div>
+    <div class="playlist-wrapper">
+      <select
+        name="playlist__id"
+        id="playlist__id"
+        data-placeholder="Select an playlist"
+      >
+        <option selected value="PLuCUpg5b_vRqWMNwIH5oazz_qD170NtI4">
+          Lo-fi
+        </option>
+        <option value="PLuCUpg5b_vRrPS1lisrBQ_tqwalDYQgPU">Cyberpunk</option>
+        <option value="PLuCUpg5b_vRqfA55WHzL0PeEhKhj7wGY6">Future Funk</option>
+        <option value="PLuCUpg5b_vRqu8xgeJKKSzotMLDHoZr55">Electric</option>
+        <option value="PLgIyxgBXHaQBbsXxYvJGw7MTRqS6QHWNP">Rock</option>
+        <option value="PL95cZBm_uQ2lzjNDET-5V4OhnB5FHQOZ5">
+          Retro/Electro
+        </option>
+        <option value="PLUF4zzcb1zV5q9P3EI1cliYLj8Hp22KqN">
+          City Pop 80's
+        </option>
+        <option value="PL95cZBm_uQ2lKtTtFuDOyrrga8FJ2-ejw">
+          Japanese City Pop 80's
+        </option>
+        <option value="PLItNBErPaaIo7no4atpL0BesvJho7MEEg">
+          Western City Pop
+        </option>
+        <option value="PLItNBErPaaIoNwtYsv6kUXTnqRRYK8bAR">
+          Korean City Pop
+        </option>
+        <option value="PLcDLYS07Qi61EoUzuWKOW0KTgsId3j9Ml">City Pop Mix</option>
+        <option value="PLKYTmz7SemapTzn8hztdqgBnSv10mMt2h">
+          RnB & Neo Soul
+        </option>
+        <option value="PLjNlQ2vXx1xbt30X8TcUfNzw_akVISXEu">
+          Anime Openings
+        </option>
+        <option value="PLKYTmz7SemaoV22tNvOWoAHb4r8irmYcE">Future Bass</option>
+      </select>
+    </div>
     <div class="links-wrapper">
       <div class="links-container">
         <a
@@ -161,6 +198,7 @@
     </div>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="../src/app.js"></script>
+
     <script>
       const sw = "service-worker.js"; // it is needed because parcel will not recognize this as a file and not precess in its manner
 

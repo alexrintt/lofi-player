@@ -7,11 +7,6 @@ import * as utils from "./utils";
 import gifs_url from "./data";
 
 // ========================================================================================
-// YOUTUBE PLAYLIST THAT HAVE ALL SONGS
-// ========================================================================================
-const playlist_id = "PLuCUpg5b_vRqWMNwIH5oazz_qD170NtI4";
-
-// ========================================================================================
 // PLAYER VAR FOR YOUTUBE API IFRAME
 // ========================================================================================
 let player = null;
@@ -26,6 +21,9 @@ const root = utils.get_by_id("main");
 
 // For loader
 const loader = utils.query(".loader");
+
+// For select change current playlist
+const current_playlist = utils.get_by_id("playlist__id");
 
 // For quote
 const quote_display = utils.get_by_id("quote");
@@ -76,7 +74,7 @@ const render_loader_ui = () => {
     loader.classList.add("static");
     return;
   }
-  
+
   loader.classList.remove("static");
   loader.classList.add("loading");
 };
@@ -91,7 +89,7 @@ const render_gifs = () => {
 
   const render_next_gif = () => {
     const new_gif = utils.random_number(0, gifs_url.length - 1);
-    
+
     current_gif = new_gif;
 
     const next_gif_url = gifs_url[current_gif];
@@ -161,30 +159,31 @@ const render_player_ui = () => {
 };
 
 const toggle_player_state = () => {
-  if(!player) return;
-  
+  if (!player) return;
+
   const is_playing = player.getPlayerState() === 1;
 
   is_playing ? player.pauseVideo() : player.playVideo();
 };
 
 const play_random_song = () => {
-  if(!player || !songs_count) return;
-  
+  if (!player || !songs_count) return;
+
   player.loadPlaylist({
-    list: playlist_id,
+    list: current_playlist.value,
     listType: "playlist",
     index: utils.random_number(0, songs_count - 1),
     startSeconds: 0,
     suggestedQuality: "small",
   });
-}
+};
 
 const render_controls = () => {
   control_left.onclick = () => player && player.previousVideo();
   control_right.onclick = () => player && player.nextVideo();
   control_play.onclick = () => toggle_player_state();
   control_play.ondblclick = () => player && play_random_song();
+  current_playlist.onchange = async () => await reinitialize_player();
 };
 
 // ========================================================================================
@@ -200,11 +199,11 @@ const render_components = () => {
 // FUNCTION TO INIT PLAYER FUNCTIONALITY USING YOUTUBE IFRAME API
 // ========================================================================================
 const init_player = async () => {
-  songs_count = await google.get_playlist_count(playlist_id);
+  songs_count = await google.get_playlist_count(current_playlist.value);
 
   const on_player_ready = (e) => {
     e.target.loadPlaylist({
-      list: playlist_id,
+      list: current_playlist.value,
       listType: "playlist",
       index: utils.random_number(0, songs_count - 1),
       startSeconds: 0,
@@ -234,6 +233,17 @@ const init_player = async () => {
       onStateChange: on_player_state_change,
     },
   });
+};
+
+// ========================================================================================
+// FUNCTION TO REINITIALIZE PLAYER WITH OTHER PLAYLIST
+// ========================================================================================
+const reinitialize_player = async () => {
+  if (!player) return;
+
+  player.destroy();
+
+  return await init_player();
 };
 
 // ========================================================================================
