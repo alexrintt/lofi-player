@@ -369,14 +369,15 @@ body {
     outline: none;
     border: 0;
     padding: 0 8px;
-
-    &::-webkit-slider-runnable-track {
+    
+    @mixin track {
       background: #fff; /*trackColor*/
       height: 4px; /*trackHeight*/
       border-radius: 4px; /*trackHeight*/
       transition: 0.3s;
     }
-    &::-webkit-slider-thumb {
+    
+    @mixin thumb {
       -webkit-appearance: none;
       background: #fff;
       width: 15px;
@@ -384,6 +385,27 @@ body {
       margin-top: -6px;
       cursor: pointer;
       transition: 0.3s;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-webkit-slider-thumb {
+      @include thumb;
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-track {
+      @include track;
+    }
+    &::-ms-thumb {
+      @include thumb;
     }
   }
 }
