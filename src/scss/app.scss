@@ -366,24 +366,53 @@ body {
     width: 100%;
     height: 28px;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     outline: none;
     border: 0;
     padding: 0 8px;
-
-    &::-webkit-slider-runnable-track {
+    
+    @mixin track {
       background: #fff; /*trackColor*/
       height: 4px; /*trackHeight*/
       border-radius: 4px; /*trackHeight*/
       transition: 0.3s;
     }
-    &::-webkit-slider-thumb {
+    
+    @mixin thumb {
       -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
       background: #fff;
       width: 15px;
       height: 15px;
       margin-top: -6px;
       cursor: pointer;
       transition: 0.3s;
+      border: none;
+      border-radius: 0;
+      box-shadow: 5px 5px 0 #020406;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+    &::-webkit-slider-thumb {
+      @include thumb;
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-track {
+      @include track;
+    }
+    &::-ms-thumb {
+      @include thumb;
     }
   }
 }
