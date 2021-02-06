@@ -123,10 +123,41 @@ body {
   z-index: 1000;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  display: flex;
+  left: 0;  
+  align-items: center;
+  min-width: 5em;
+  max-width: 12em;
+  display: grid;
+  grid-template-areas: "select";
+  margin: 1rem;
+  padding: 0;
+  box-shadow: 5px 5px 0 #020406;
+  background: white;
+}
+
+.playlist-wrapper::after {
+  width: 1em;
+  background: #020406;
+  content: "";
+  -webkit-clip-path: polygon(0% 20%, 20% 20%, 20% 40%, 40% 40%, 40% 60%, 60% 60%, 60% 40%, 80% 40%, 80% 20%, 100% 20%, 100% 40%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%, 20% 40%, 0% 40%);
+  clip-path: polygon(0% 20%, 20% 20%, 20% 40%, 40% 40%, 40% 60%, 60% 60%, 60% 40%, 80% 40%, 80% 20%, 100% 20%, 100% 40%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%, 20% 40%, 0% 40%);
+  height: 1em;
+  margin: auto;
+  margin-right: 10px;
+}
+
+// A trick from this: https://moderncss.dev/custom-select-styles-with-pure-css/
+.playlist-wrapper select, .playlist-wrapper::after {
+  grid-area: select;
+}
+
+#playlist__id {
+  border: none;
+  padding: 3px;
+  font-size: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 // ========================================================
