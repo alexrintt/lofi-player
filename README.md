@@ -115,6 +115,8 @@ All these amazing gifs and images that are used as a background are from [this p
 <br>
 <br>
 
+<samp>
+
 <h2 align="center">
   Open Source
 </h2>
@@ -125,3 +127,5 @@ All these amazing gifs and images that are used as a background are from [this p
 <p align="center">
   <img src="/public/favicon.png" width="35" />
 </p>
+  
+</samp>
