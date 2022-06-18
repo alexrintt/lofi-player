@@ -22,9 +22,6 @@ jobs:
       - name: Pre Build
         run: GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} yarn pre-deploy
 
-      - name: Build
-        run: yarn deploy
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
