@@ -39,7 +39,7 @@
 
 Enjoy [clicking here](https://lakscastro.github.io/lofi-player/)
 
-## Support
+### Support
 
 If you have ideas to share, bugs to report or need support, you can either open an issue or join our Discord server
 
@@ -47,60 +47,59 @@ If you have ideas to share, bugs to report or need support, you can either open 
   <kbd><img src="https://discordapp.com/api/guilds/771498135188799500/widget.png?style=banner2" alt="Discord Banner"/></kbd>
 </a>
 
-# What is it?
+### What is it?
 
-Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because he is very simple, perfect for this project.
+Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS and JavaScript, using Youtube Data API v3 for fetch Playlist videos count, Youtube Iframe API to render music as background. Parcel is a choosed Module Bundler because it's simple, perfect for this project.
 
-# How to clone project
+### How to clone project
 
 > _Note, dont forget to create a .env file with your Google API Credentials
 > in [Google Developers Console](https://console.developers.google.com/apis/dashboard) and active the Youtube Data API v3 in API Libraries._
 
-- To clone this repo
+#### Clone this repo
 
 ```
 git clone https://github.com/LaksCastro/lofi-player.git
 ```
 
-- To change path
+#### Change path
 
 ```
 cd lofi-player
 ```
 
-- To install dependencies
+#### Install dependencies
 
 ```
 yarn install
 npm install
 ```
 
-- To run development server
+#### Run development server
 
 ```
 yarn dev
 npm run dev
 ```
 
-- To create static files
+#### Create static files
 
 ```
 yarn pre-build
 npm run pre-build
 ```
 
-- To deploy to github pages
+#### Deploy to github pages
 
-```
-yarn build
-npm run build
-```
+Just push everything to a repository of yours. `.github` folder contains an action will automatically build and publish to the GitHub pages.
 
-# 8BitDash
+Remeber to set `GOOGLE_API_KEY` in your repository <kbd>Settings</kbd> > <kbd>Secrets</kbd> > <kbd>Actions</kbd> > <kbd>New repository secret</kbd> and set with the value your previous generated on the first step (Generate Google Developer Console credentials).
+
+## 8BitDash
 
 All these amazing gifs and images that are used as a background are from [this project](http://www.8bitdash.com/) and [its repository](https://github.com/andumorie/8bitdash.github.io/) and they have a store in which sell [these gifs](https://8bitdash.threadless.com/).
 
-# Creators
+## Creators
 
 <table>
   <tr>
