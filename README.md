@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/lakscastro" target="_blank">
-    <img src="https://img.shields.io/twitter/url?label=Connect%20%40LaksCastro&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
+  <a href="https://www.linkedin.com/in/alexrintt" target="_blank">
+    <img src="https://img.shields.io/twitter/url?label=Connect%20%40alexrintt&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Falexrintt%2F" alt="Follow" />
   </a>
 </p>
 <p align="center">
@@ -22,7 +22,7 @@
     <img src="https://img.shields.io/twitter/url?label=Follow%20%40Emmanuel&logo=instagram&url=https%3A%2F%2Fwww.instagram.com%2Fmanno_eu%2F" alt="Follow" />
   </a>
   <a href="https://www.linkedin.com/in/emmanuel-messias-535621127/" target="_blank">
-    <img src="https://img.shields.io/twitter/url?label=Connect%20%40Emmanuel&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Flakscastro%2F" alt="Follow" />
+    <img src="https://img.shields.io/twitter/url?label=Connect%20%40Emmanuel&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Falexrintt%2F" alt="Follow" />
   </a>
 </p>
 
@@ -32,12 +32,12 @@
 
 <p>
   <img src="./docs/pt-br.png" alt="Portuguese" height="16">
-  <a href="https://github.com/LaksCastro/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
+  <a href="https://github.com/alexrintt/lofi-player/blob/master/README-ptbr.md">Ler em português</a>
 </p>
 
 # Live On
 
-Enjoy [clicking here](https://lakscastro.github.io/lofi-player/)
+Enjoy [clicking here](https://alexrintt.github.io/lofi-player/)
 
 ### Support
 
@@ -59,7 +59,7 @@ Its a simple and minimalist Player with Lofi music style, builded with HTML, CSS
 #### Clone this repo
 
 ```
-git clone https://github.com/LaksCastro/lofi-player.git
+git clone https://github.com/alexrintt/lofi-player.git
 ```
 
 #### Change path
@@ -110,9 +110,9 @@ All these amazing gifs and images that are used as a background are from [this p
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/LaksCastro">
+      <a href="https://github.com/alexrintt">
         <img src="https://avatars2.githubusercontent.com/u/51419598?s=400&v=4" width="100px;" alt=""/><br />
-       <sub><b>Laks Castro</b></sub>
+       <sub><b>Alex Rintt</b></sub>
       </a>
     </td>
  </table>
@@ -128,9 +128,9 @@ All these amazing gifs and images that are used as a background are from [this p
   Open Source
 </h2>
 <p align="center">
-  <sub>Copyright © 2020-present, Laks Castro.</sub>
+  <sub>Copyright © 2020-present, Alex Rintt.</sub>
 </p>
-<p align="center">Lofi Player <a href="https://github.com/LaksCastro/lofi-player/blob/master/LICENSE.md">is MIT licensed 💖</a></p>
+<p align="center">Lofi Player <a href="https://github.com/alexrintt/lofi-player/blob/master/LICENSE.md">is MIT licensed 💖</a></p>
 <p align="center">
   <img src="/public/favicon.png" width="35" />
 </p>

@@ -27,16 +27,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LaksCastro/lofi-player.git"
+    "url": "git+https://github.com/alexrintt/lofi-player.git"
   },
   "keywords": [
     "parcel"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LaksCastro/lofi-player/issues"
+    "url": "https://github.com/alexrintt/lofi-player/issues"
   },
-  "homepage": "https://lakscastro.github.io/lofi-player",
+  "homepage": "https://alexrintt.github.io/lofi-player",
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/plugin-transform-runtime": "^7.9.0",
