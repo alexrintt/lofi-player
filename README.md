@@ -13,11 +13,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/alexrintt" target="_blank">
-    <img src="https://img.shields.io/twitter/url?label=Connect%20%40alexrintt&logo=linkedin&url=https%3A%2F%2Fwww.twitter.com%2Falexrintt%2F" alt="Follow" />
-  </a>
-</p>
-<p align="center">
   <a href="https://www.instagram.com/manno_eu/" target="_blank">
     <img src="https://img.shields.io/twitter/url?label=Follow%20%40Emmanuel&logo=instagram&url=https%3A%2F%2Fwww.instagram.com%2Fmanno_eu%2F" alt="Follow" />
   </a>
